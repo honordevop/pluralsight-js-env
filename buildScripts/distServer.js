@@ -17,6 +17,8 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
+// Removed because we will be hitting a live api server on heroku
+/*
 app.get('/users', function(req, res) {
   // Hard coding for simplicity. Pretent this hits a real database
   res.json([
@@ -25,6 +27,7 @@ app.get('/users', function(req, res) {
     {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@gmail.com"}
   ]);
 });
+*/
 
 app.listen(port, function(err) {
   if (err) {
